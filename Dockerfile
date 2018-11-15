@@ -14,7 +14,7 @@ RUN bash -c "yes | amazon-linux-extras install docker" \
 
 FROM corretto8-al2
 
-RUN bash -c 'source "$HOME/.sdkman/bin/sdkman-init.sh"; sdk install sbt 1.2.6' && \
+RUN bash -c 'source "$HOME/.sdkman/bin/sdkman-init.sh"; sdk install sbt 1.1.6' && \
     ln -s $HOME/.sdkman/candidates/sbt/current/bin/sbt /usr/local/bin/sbt && \
     curl -L https://git.io/n-install | bash -s -- -y && \
     ln -s /root/n/bin/n /usr/local/bin/n
