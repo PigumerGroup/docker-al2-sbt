@@ -2,7 +2,7 @@ FROM amazonlinux:2 as corretto8-al2
 
 RUN bash -c "yes | amazon-linux-extras install docker" \
  && yum -y update \
- && yum -y install wget curl zip unzip git make which \
+ && yum -y install wget curl zip unzip git make which tar \
  && wget https://d3pxv6yz143wms.cloudfront.net/java-1.8.0-amazon-corretto-1.8.0_192.b12-1.amzn2.x86_64.rpm \
  && wget https://d3pxv6yz143wms.cloudfront.net/java-1.8.0-amazon-corretto-devel-1.8.0_192.b12-1.amzn2.x86_64.rpm \
  && rpm -K java-1.8.0-amazon-corretto-1.8.0_192.b12-1.amzn2.x86_64.rpm \
